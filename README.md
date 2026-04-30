@@ -690,3 +690,24 @@ aws iam simulate-principal-policy \
 ---
 
 *Last updated: Day 01 | Tracker version: 1.0*
+
+---
+
+## Day 01 Completion Log
+Date: 2026-04-30
+
+### Completed Tasks
+- [x] Logged into AWS Console (Account: Bash, ID: 163209926128)
+- [x] Region confirmed: eu-west-2 (London)
+- [x] Root MFA verified (Passkey/Security key)
+- [x] Terminated rogue kubeadm-node-1 EC2 instance (m7i.flex.large) - stopped $3.48/month charge
+- [x] Zero spend budget alert created (alerts at $0.01)
+- [x] IAM Administrators group created with AdministratorAccess policy
+- [x] IAM admin user bash-admin created and added to Administrators group
+- [x] No root access keys confirmed
+
+### Architecture Decisions
+- Root account: locked down, MFA only, never used for daily work
+- Daily work: use bash-admin IAM user via https://163209926128.signin.aws.amazon.com/console
+- Primary region: eu-west-2 (London)
+- Billing: zero spend budget, credits cover any accidental usage
